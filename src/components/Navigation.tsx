@@ -231,6 +231,13 @@ function NavigationGroup({
 
 export const navigation: Array<NavGroup> = [
   {
+    title: 'Project Description',
+    links: [
+      // ... 其他链接
+      { title: '项目说明', href: '/project-description' },
+    ],
+  },
+  {
     title: 'Guides',
     links: [
       { title: 'Introduction', href: '/' },
@@ -261,6 +268,7 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <TopLevelNavItem href="/">API</TopLevelNavItem>
         <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
         <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        <TopLevelNavItem href="/project-description">项目说明</TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
